@@ -1,0 +1,25 @@
+<section class="skills-section">
+  <!-- Fundo de partículas -->
+  <div class="particles">
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <h2>Habilidades</h2>
+    <div class="skills-grid">
+      <!-- Primeira linha: Comunicação, Autonomia, Resolução de Problemas -->
+      <div class="skill-card" *ngFor="let skill of skills">
+        <h3>{{ skill.name }}</h3>
+        <p>{{ skill.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

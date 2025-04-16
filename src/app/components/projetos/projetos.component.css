@@ -1,0 +1,392 @@
+/* Estilo geral da seção */
+.projects-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4b5563, #1e40af, #7c3aed, #db2777);
+  background-size: 400%;
+  animation: gradientAnimation 12s ease infinite;
+  padding: 2rem 0;
+}
+
+/* Animação de gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Efeito de pulso no fundo */
+.projects-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseAnimation 6s ease-in-out infinite;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Grid de projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card de projeto */
+.project-card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  opacity: 1;
+}
+
+.project-name {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.project-card:hover .project-name {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #db2777;
+}
+
+.modal-content h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.modal-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #1e40af;
+}
+
+/* Partículas flutuantes */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: float 15s infinite linear;
+  pointer-events: none;
+}
+
+.particle:nth-child(1) {
+  width: 18px;
+  height: 18px;
+  top: 15%;
+  left: 10%;
+  animation-duration: 16s;
+}
+.particle:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  top: 25%;
+  left: 25%;
+  animation-duration: 20s;
+}
+.particle:nth-child(3) {
+  width: 22px;
+  height: 22px;
+  top: 35%;
+  left: 40%;
+  animation-duration: 14s;
+}
+.particle:nth-child(4) {
+  width: 15px;
+  height: 15px;
+  top: 55%;
+  left: 55%;
+  animation-duration: 22s;
+}
+.particle:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  top: 75%;
+  left: 70%;
+  animation-duration: 18s;
+}
+.particle:nth-child(6) {
+  width: 10px;
+  height: 10px;
+  top: 45%;
+  left: 80%;
+  animation-duration: 15s;
+}
+.particle:nth-child(7) {
+  width: 16px;
+  height: 16px;
+  top: 65%;
+  left: 20%;
+  animation-duration: 21s;
+}
+.particle:nth-child(8) {
+  width: 14px;
+  height: 14px;
+  top: 85%;
+  left: 35%;
+  animation-duration: 17s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(15px);
+    opacity: 0.7;
+  }
+}
+
+/* Animações de entrada */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .project-card {
+    width: 200px;
+    height: 250px;
+  }
+
+  .project-name {
+    font-size: 1.25rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+  }
+
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .modal-content p {
+    font-size: 1rem;
+  }
+}

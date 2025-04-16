@@ -1,0 +1,69 @@
+<section class="projects-section">
+  <!-- Fundo de partículas -->
+  <div class="particles">
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <h2>Projetos</h2>
+    <div class="projects-grid">
+      <!-- Primeira linha: Flappy Bird, Law House -->
+      <div class="project-card" (click)="openModal(0)">
+        <img
+          src="/classificador.png"
+          alt="Imagem do telegram"
+          class="project-img"
+        />
+        <span class="project-name">Classificador de imagem</span>
+      </div>
+
+      <div class="project-card" (click)="openModal(1)">
+        <img src="/law_house2.png" alt="Law House" class="project-img" />
+        <span class="project-name">Law House</span>
+      </div>
+
+      <!-- Segunda linha: Portfolio, Análise de Dados Airbnb -->
+      <div class="project-card" (click)="openModal(2)">
+        <img src="/portifolio.png" alt="Portfolio" class="project-img" />
+        <span class="project-name">Portfolio</span>
+      </div>
+      <div class="project-card" (click)="openModal(3)">
+        <img
+          src="/airbnb.png"
+          alt="Análise de Dados Airbnb"
+          class="project-img"
+        />
+        <span class="project-name">Análise de Dados Airbnb</span>
+      </div>
+    </div>
+
+    <!-- Modal para detalhes do projeto -->
+    <div class="modal" *ngIf="isModalOpen" (click)="closeModal($event)">
+      <div class="modal-content">
+        <span class="close-btn" (click)="closeModal($event)">×</span>
+        <h3>{{ selectedProject?.name }}</h3>
+        <img
+          src="{{ selectedProject?.image }}"
+          alt="{{ selectedProject?.name }}"
+          class="modal-img"
+        />
+        <p>{{ selectedProject?.description }}</p>
+        <p><strong>Tecnologias:</strong> {{ selectedProject?.technologies }}</p>
+        <a
+          href="{{ selectedProject?.link }}"
+          target="_blank"
+          class="project-link"
+          >Ver Projeto</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

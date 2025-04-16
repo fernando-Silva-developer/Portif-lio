@@ -1,0 +1,248 @@
+/* Estilo geral da seção */
+.about-me-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(45deg, #6b7280, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 400%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 2rem 0;
+}
+
+/* Animação de gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container principal */
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Conteúdo flex */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Imagem */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Texto */
+.text-container {
+  flex: 1;
+  text-align: left;
+  animation: fadeInRight 1s ease-out;
+}
+
+.text-container h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Partículas flutuantes */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: float 20s infinite linear;
+  pointer-events: none;
+}
+
+.particle:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  top: 10%;
+  left: 15%;
+  animation-duration: 18s;
+}
+.particle:nth-child(2) {
+  width: 15px;
+  height: 15px;
+  top: 20%;
+  left: 30%;
+  animation-duration: 22s;
+}
+.particle:nth-child(3) {
+  width: 25px;
+  height: 25px;
+  top: 40%;
+  left: 45%;
+  animation-duration: 15s;
+}
+.particle:nth-child(4) {
+  width: 10px;
+  height: 10px;
+  top: 60%;
+  left: 60%;
+  animation-duration: 25s;
+}
+.particle:nth-child(5) {
+  width: 18px;
+  height: 18px;
+  top: 80%;
+  left: 75%;
+  animation-duration: 20s;
+}
+.particle:nth-child(6) {
+  width: 12px;
+  height: 12px;
+  top: 30%;
+  left: 85%;
+  animation-duration: 17s;
+}
+.particle:nth-child(7) {
+  width: 22px;
+  height: 22px;
+  top: 50%;
+  left: 20%;
+  animation-duration: 23s;
+}
+.particle:nth-child(8) {
+  width: 16px;
+  height: 16px;
+  top: 70%;
+  left: 35%;
+  animation-duration: 19s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0.8;
+  }
+}
+
+/* Animações de entrada */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container {
+    justify-content: center;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .text-container h2 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+  }
+
+  .about-me-section {
+    padding: 1rem 0;
+  }
+}
