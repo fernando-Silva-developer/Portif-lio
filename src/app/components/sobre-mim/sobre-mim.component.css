@@ -10,6 +10,7 @@
   background-size: 400%;
   animation: gradientAnimation 15s ease infinite;
   padding: 2rem 0;
+  margin-top: 2rem;
 }
 
 /* Animação de gradiente */
@@ -244,5 +245,6 @@
 
   .about-me-section {
     padding: 1rem 0;
+    margin-top: 0rem;
   }
 }

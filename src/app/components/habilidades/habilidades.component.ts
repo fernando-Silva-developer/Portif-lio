@@ -13,7 +13,7 @@ export class HabilidadesComponent {
     {
       name: 'Comunicação',
       description:
-        'Expresso ideias claramente por escrito e verbalmente, garantindo colaboração eficaz em equipes remotas via Slack e Zoom.',
+        'Expresso ideias claramente por escrito e verbalmente, garantindo colaboração eficaz em equipes.',
     },
     {
       name: 'Autonomia',
@@ -38,7 +38,7 @@ export class HabilidadesComponent {
     {
       name: 'Gestão do Tempo',
       description:
-        'Organizo tarefas e cumpro prazos, otimizando a produtividade em um ambiente de home-office.',
+        'Organizo tarefas e cumpro prazos, otimizando a produtividade.',
     },
   ];
 }
