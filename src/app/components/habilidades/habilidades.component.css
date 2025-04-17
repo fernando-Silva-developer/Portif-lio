@@ -104,14 +104,14 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .skill-card p {
   font-size: 1rem;
   color: #e0e0e0;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* Partículas flutuantes */
