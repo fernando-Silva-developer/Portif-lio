@@ -23,7 +23,7 @@ export class HabilidadesComponent {
     {
       name: 'Resolução de Problemas',
       description:
-        'Uso pensamento crítico para identificar, analisar e solucionar desafios técnicos e operacionais remotamente.',
+        'Uso pensamento crítico para identificar, analisar e solucionar desafios técnicos e operacionais.',
     },
     {
       name: 'Colaboração',
