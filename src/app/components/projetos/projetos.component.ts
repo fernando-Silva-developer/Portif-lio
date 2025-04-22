@@ -35,7 +35,7 @@ export class ProjetosComponent {
       description:
         'Meu portfólio pessoal, destacando projetos e habilidades com um design moderno, animações e navegação fluida em abas interativas. Desenvolvido para poder mostrar meus projetos de forma mais dinâmica.',
       technologies: 'Angular, TypeScript, HTML, CSS.',
-      link: '',
+      link: 'https://github.com/fernando-Silva-developer/Portif-lio',
     },
     {
       name: 'Análise de Dados Airbnb',
